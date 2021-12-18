@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+div{
+    position: absolute;
+    left:50%;
+    width: 150px;
+    margin-left: -75px;
+}
+li{
+    background-color: rgb(196, 186, 186);
+    width: 150px;
+    height: 40px;
+    list-style: none;
+}
+button{
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+.shuru{
+    display: inline-block;
+    width: 150px;
+}
+.del{
+    position: absolute;
+    right: 0;
+}
+.clear{
+    position: absolute;
+    right: 0;
+}

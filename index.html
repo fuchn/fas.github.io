@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>记事本vue</title>
+        <link rel="stylesheet" href="css/12.16.css">
+        <!-- <link rel="stylesheet" href="../js/12.16.js"> -->
+    </head>
+    <body>
+        <div id="form">
+        <input type="text" @keyup.enter="add" v-model="inputvalue" class="shuru">
+        <ul>
+            <li v-for="(item,index) in list" >
+                <strong>{{index+1}}</strong>
+                <label>{{item}}</label>
+                <button @click="remove" class="del" value="删除"></button>
+            </li>
+        </ul>
+        <button @click="clearall" value="清空" class="clear"></button>
+        
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script>
+            var form = new Vue({
+                el:"#form",
+                data:{
+                    list:[],
+                    inputvalue:"1"
+                },
+                methods:{
+                    add:function(){
+                        this.list.push(this.inputvalue);
+                    },
+                    remove:function(index){
+                        this.list.splice(index,1);
+                    },
+                    clearall:function(){
+                        this.list=[];
+                    }
+                },
+            })
+        </script>
+    </body>
+</html>
